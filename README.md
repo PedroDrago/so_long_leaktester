@@ -27,6 +27,8 @@ make
 A logfile will be generate for each map test. Both the logfiles and the map files used for testing can be found in the `maps` directory. 
 
 ---
+# So_long_leaktester
+
 Esse é um pequeno script que vai testar seu so_long em varios mapas e verificar se existe vazamento de memória nesses casos.
 
 **Atenção: Nenhum testador por aí vai cobrir 100% dos casos, seja esperto, pense e faça seus próprios testes, isso conta para qualquer projeto.**
