@@ -27,7 +27,8 @@ git clone https://github.com/PedroDrago/so_long_leaktester.git
 ```bash
 make
 ```
-Obs: Have your makefile ready. By default so_long leaktester will cd into your so_long directory, run `make` and will look for an executable named `so_long`. You can change this path if you will bi modifying the `SO_LONG` variable in `leaktester`, although, I do not recomend changing anything.
+### Observations
+Have your makefile ready. By default so_long leaktester will cd into your so_long directory, run `make` and will look for an executable named `so_long`. You can change this path if you will bi modifying the `SO_LONG` variable in `leaktester`, although, I do not recomend changing anything.
 
 **Attetion: In the case of your so_long window opening while the test is running, you will need to close the window in an appropriate way for the test to continue (ESC or Winning the game)**.
 
@@ -63,6 +64,8 @@ git clone https://github.com/PedroDrago/so_long_leaktester.git
 ```bash
 make
 ```
+
+### Observações
 OBS: Tenha seu makefile pronto. Por padrão so_long_leaktester vai entrar no seu diretório do so_long (usar `cd`), rodar `make` e procurar por um executável chamado `so_long`. Você pode mudar o path modificando a variável `SO_LONG` em `leaktester`, porém, não recomendo que o faça.
 
 **Atenção: Em caso da janela do seu so_long abrir enquanto o teste está rodando, você precisará fechar a janela de um jeito apropriado (ESC ou ganhando o jogo)**.
