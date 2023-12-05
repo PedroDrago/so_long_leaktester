@@ -23,7 +23,7 @@ brew install make valgrind
 ``` bash
 git clone https://github.com/PedroDrago/so_long_leaktester.git
 ```
-2. Run leaktester:
+2. Run leaktester from inside so_long_leaktester repository:
 ```bash
 make
 ```
@@ -60,7 +60,7 @@ brew install make valgrind
 ``` bash
 git clone https://github.com/PedroDrago/so_long_leaktester.git
 ```
-2. Rode o leaktester
+2. Rode o tester de dentro do repositório so_long_leaktester
 ```bash
 make
 ```
