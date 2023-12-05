@@ -13,7 +13,7 @@ If you don't have the dependencies installed:
 ```bash
 sudo apt install make valgrind
 ```
-- MAC
+- Mac
 ```bash
 brew install make valgrind
 ```
@@ -52,7 +52,7 @@ Caso não possua alguma das dependencias:
 ```bash
 sudo apt install make valgrind
 ```
-- MAC
+- Mac
 ```bash
 brew install make valgrind
 ```
