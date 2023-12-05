@@ -11,7 +11,7 @@ This is a small script that will test your so_long in a bunch of maps, and see i
 ### Usage
 1. Clone this repository inside your so_long directory:
 ``` bash
-git clone ...
+git clone https://github.com/PedroDrago/so_long_leaktester.git
 ```
 2. Build your `so_long` project (i.e. compile your project), by default so_long leaktester will cd into your so_long directory and will look for an executable named `so_long`. You can change this path if you will bi modifying the `SO_LONG` variable in `leaktester`, although, I do not recomend changing anything.
 3. Run leaktester:
@@ -40,7 +40,7 @@ Esse é um pequeno script que vai testar seu so_long em varios mapas e verificar
 ### Como usar
 1. Clone esse repositório dentro do diretório do seu so_long:
 ``` bash
-git clone ...
+git clone https://github.com/PedroDrago/so_long_leaktester.git
 ```
 2. Compile seu projeto. Por padrão so_long_leaktester vai entrar no seu diretório do so_long (usar `cd`) e procurar por um executável chamado `so_long`. Você pode mudar o path modificando a variável `SO_LONG` em `leaktester`, porém, não recomendo que o faça.
 3. Rode o leaktester
