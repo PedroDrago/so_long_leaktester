@@ -23,7 +23,7 @@ brew install make valgrind
 ``` bash
 git clone https://github.com/PedroDrago/so_long_leaktester.git
 ```
-2. Build your `so_long` project (i.e. compile your project), by default so_long leaktester will cd into your so_long directory and will look for an executable named `so_long`. You can change this path if you will bi modifying the `SO_LONG` variable in `leaktester`, although, I do not recomend changing anything.
+2. Have your makefile ready. By default so_long leaktester will cd into your so_long directory, run `make` and will look for an executable named `so_long`. You can change this path if you will bi modifying the `SO_LONG` variable in `leaktester`, although, I do not recomend changing anything.
 3. Run leaktester:
 ```bash
 ./leaktester
@@ -62,7 +62,7 @@ brew install make valgrind
 ``` bash
 git clone https://github.com/PedroDrago/so_long_leaktester.git
 ```
-2. Compile seu projeto. Por padrão so_long_leaktester vai entrar no seu diretório do so_long (usar `cd`) e procurar por um executável chamado `so_long`. Você pode mudar o path modificando a variável `SO_LONG` em `leaktester`, porém, não recomendo que o faça.
+2. Por padrão so_long_leaktester vai entrar no seu diretório do so_long (usar `cd`), rodar `make` e procurar por um executável chamado `so_long`. Você pode mudar o path modificando a variável `SO_LONG` em `leaktester`, porém, não recomendo que o faça.
 3. Rode o leaktester
 ```bash
 ./leaktester

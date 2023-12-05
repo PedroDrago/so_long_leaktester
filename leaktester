@@ -1,6 +1,7 @@
 #! /bin/bash
 
 cd ..
+make --no-print-directory
 SO_LONG=./so_long
 MAP_DIR=so_long_leaktester/maps
 RED='\033[0;31m'
