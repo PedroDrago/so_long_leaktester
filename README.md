@@ -7,7 +7,6 @@ This is a small script that will test your so_long in a bunch of invalid maps, a
 ### Dependencias
 - Valgrind
 - Make
-- Bash
 
 ### Usage
 1. Clone this repository inside your so_long directory:
