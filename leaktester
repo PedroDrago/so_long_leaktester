@@ -14,11 +14,11 @@ for file in "$MAP_DIR"/*; do
 	valgrind --leak-check=full --show-reachable=yes --show-leak-kinds=all --error-limit=no --gen-suppressions=all --log-file="$file.log" $SO_LONG $file > /dev/null 2>&1
 	bytes=$(cat "$file.log" | awk '/in use at exit/ {print $6}')
 	if [[ $bytes -eq 0 ]]; then
-		echo -e "$GREEN No leaks in $file $ENDCOLOR"
+		echo -e "$GREEN""No leaks in $file $ENDCOLOR"
 	else
-		echo -e "$RED $bytes bytes leaked in $file $ENDCOLOR"
+		echo -e "$RED""$bytes bytes leaked in $file $ENDCOLOR"
 	fi
 done
 
 
-echo -e "$MAGENTA Log files can be found in $MAP_DIR directory$ENDCOLOR"
+echo -e "$MAGENTA""Log files can be found in $MAP_DIR directory$ENDCOLOR"
