@@ -8,6 +8,16 @@ This is a small script that will test your so_long in a bunch of maps, and see i
 - Valgrind
 - Make
 
+If you don't have the dependencies installed:
+- Linux (debian based):
+```bash
+sudo apt install make valgrind
+```
+- MAC
+```bash
+brew install make valgrind
+```
+
 ### Usage
 1. Clone this repository inside your so_long directory:
 ``` bash
@@ -36,6 +46,16 @@ Esse é um pequeno script que vai testar seu so_long em varios mapas e verificar
 ### Dependencias
 - Valgrind
 - Make
+
+Caso não possua alguma das dependencias:
+- Linux (baseados em Debian):
+```bash
+sudo apt install make valgrind
+```
+- MAC
+```bash
+brew install make valgrind
+```
 
 ### Como usar
 1. Clone esse repositório dentro do diretório do seu so_long:
