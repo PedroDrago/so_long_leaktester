@@ -1,14 +1,16 @@
 #! /bin/bash
 
-SO_LONG=../so_long
-MAP_DIR=maps
+cd ..
+SO_LONG=./so_long
+MAP_DIR=so_long_leaktester/maps
 RED='\033[0;31m'
 GREEN='\033[0;32m'
+MAGENTA='\033[0;35m'
 ENDCOLOR='\033[0m'
 
 rm -f "$MAP_DIR"/*.log
 for file in "$MAP_DIR"/*; do
-	valgrind --leak-check=full --show-reachable=yes --show-leak-kinds=all --error-limit=no --gen-suppressions=all --log-file="$file.log" $SO_LONG $file 2> /dev/null
+	valgrind --leak-check=full --show-reachable=yes --show-leak-kinds=all --error-limit=no --gen-suppressions=all --log-file="$file.log" $SO_LONG $file > /dev/null 2>&1
 	bytes=$(cat "$file.log" | awk '/in use at exit/ {print $6}')
 	if [[ $bytes -eq 0 ]]; then
 		echo -e "$GREEN No leaks in $file $ENDCOLOR"
@@ -18,4 +20,4 @@ for file in "$MAP_DIR"/*; do
 done
 
 
-echo -e "$GREEN Log files generate in $MAP_DIR directory$ENDCOLOR"
+echo -e "$MAGENTA Log files can be found in $MAP_DIR directory$ENDCOLOR"

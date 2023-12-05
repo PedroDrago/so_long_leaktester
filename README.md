@@ -1,8 +1,8 @@
 # So_long leaktester
 
-This is a small script that will test your so_long in a bunch of invalid maps, and see if you have memory leak in those cases.
+This is a small script that will test your so_long in a bunch of maps, and see if you have memory leak in those cases. 
 
-**Attention: This tester won't test leaks in valid maps.**
+**Attention: No tester out there will cover 100% cases, be smart, think and make your own tests, that counts for every project.**
 
 ### Dependencias
 - Valgrind
@@ -13,7 +13,7 @@ This is a small script that will test your so_long in a bunch of invalid maps, a
 ``` bash
 git clone ...
 ```
-2. Build your `so_long` project (i.e. compile your project), by default so_long leaktester will be looking for an executable named `so_long` in the parent directory (`..`). You can change this path if you will bi modifying the `SO_LONG` variable in `leaktester`
+2. Build your `so_long` project (i.e. compile your project), by default so_long leaktester will cd into your so_long directory and will look for an executable named `so_long`. You can change this path if you will bi modifying the `SO_LONG` variable in `leaktester`
 3. Run leaktester:
 ```bash
 ./leaktester
