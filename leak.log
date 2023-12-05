@@ -1,0 +1,919 @@
+==48114== Memcheck, a memory error detector
+==48114== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==48114== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==48114== Command: ../so_long maps/no_valid_path1.ber
+==48114== Parent PID: 48063
+==48114== 
+==48114== Invalid write of size 8
+==48114==    at 0x10F01D: create_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10F05F: generate_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10FF6B: main (in /home/drago/so_long/so_long)
+==48114==  Address 0x4c4fdb8 is 56 bytes inside a block of size 57 alloc'd
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x10EF8E: create_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10F05F: generate_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10FF6B: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Addr8
+   fun:create_map
+   fun:generate_map
+   fun:main
+}
+==48114== Conditional jump or move depends on uninitialised value(s)
+==48114==    at 0x10F286: set_collectibles_number (in /home/drago/so_long/so_long)
+==48114==    by 0x10F092: generate_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10FF6B: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   fun:set_collectibles_number
+   fun:generate_map
+   fun:main
+}
+==48114== Conditional jump or move depends on uninitialised value(s)
+==48114==    at 0x110C5A: check_map_characters (in /home/drago/so_long/so_long)
+==48114==    by 0x110A15: validate_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10FFC6: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   fun:check_map_characters
+   fun:validate_map
+   fun:main
+}
+==48114== Conditional jump or move depends on uninitialised value(s)
+==48114==    at 0x11099F: check_rectangular (in /home/drago/so_long/so_long)
+==48114==    by 0x110A31: validate_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10FFC6: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   fun:check_rectangular
+   fun:validate_map
+   fun:main
+}
+==48114== Conditional jump or move depends on uninitialised value(s)
+==48114==    at 0x110D47: check_border_rows (in /home/drago/so_long/so_long)
+==48114==    by 0x110DEF: check_surrounded (in /home/drago/so_long/so_long)
+==48114==    by 0x110A4D: validate_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10FFC6: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   fun:check_border_rows
+   fun:check_surrounded
+   fun:validate_map
+   fun:main
+}
+==48114== Conditional jump or move depends on uninitialised value(s)
+==48114==    at 0x10F1CC: set_map_positions (in /home/drago/so_long/so_long)
+==48114==    by 0x10FFFB: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   fun:set_map_positions
+   fun:main
+}
+==48114== 
+==48114== Process terminating with default action of signal 2 (SIGINT)
+==48114==    at 0x4ADED87: poll (poll.c:29)
+==48114==    by 0x4BFA7E1: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x4BFC22B: xcb_wait_for_event (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x48B6F87: _XReadEvents (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48B71D0: XWindowEvent (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x1124A5: mlx_int_wait_first_expose (in /home/drago/so_long/so_long)
+==48114==    by 0x1121CE: mlx_new_window (in /home/drago/so_long/so_long)
+==48114==    by 0x110038: main (in /home/drago/so_long/so_long)
+==48114== 
+==48114== HEAP SUMMARY:
+==48114==     in use at exit: 58,677 bytes in 55 blocks
+==48114==   total heap usage: 175 allocs, 120 frees, 66,777 bytes allocated
+==48114== 
+==48114== 3 bytes in 1 blocks are still reachable in loss record 1 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x4A6E58E: strdup (strdup.c:42)
+==48114==    by 0x48A0B45: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 8 bytes in 1 blocks are still reachable in loss record 2 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x4A6E58E: strdup (strdup.c:42)
+==48114==    by 0x489D9AE: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x49B7820: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49BC9E2: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x111D83: mlx_int_deal_shm (in /home/drago/so_long/so_long)
+==48114==    by 0x112011: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:XInitExtension
+   fun:XextAddDisplay
+   fun:XShmQueryVersion
+   fun:mlx_int_deal_shm
+   fun:mlx_init
+   fun:main
+}
+==48114== 8 bytes in 1 blocks are still reachable in loss record 3 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x49B5B34: ??? (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49B79DF: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49BC9E2: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x111D83: mlx_int_deal_shm (in /home/drago/so_long/so_long)
+==48114==    by 0x112011: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   obj:/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+   fun:XextAddDisplay
+   fun:XShmQueryVersion
+   fun:mlx_int_deal_shm
+   fun:mlx_init
+   fun:main
+}
+==48114== 10 bytes in 1 blocks are still reachable in loss record 4 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x4A6E58E: strdup (strdup.c:42)
+==48114==    by 0x489D9AE: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x4907213: XkbUseExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48A16A8: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:XInitExtension
+   fun:XkbUseExtension
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 16 bytes in 1 blocks are still reachable in loss record 5 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x4BFD2EE: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x4BFDE6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x48B0EE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48A0B68: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:xcb_connect_to_fd
+   fun:xcb_connect_to_display_with_auth_info
+   fun:_XConnectXCB
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 21 bytes in 1 blocks are still reachable in loss record 6 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48A103E: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 24 bytes in 1 blocks are still reachable in loss record 7 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x49B7041: XextCreateExtension (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49B74CC: ??? (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49B79C8: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49BC9E2: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x111D83: mlx_int_deal_shm (in /home/drago/so_long/so_long)
+==48114==    by 0x112011: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:XextCreateExtension
+   obj:/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+   fun:XextAddDisplay
+   fun:XShmQueryVersion
+   fun:mlx_int_deal_shm
+   fun:mlx_init
+   fun:main
+}
+==48114== 24 bytes in 1 blocks are still reachable in loss record 8 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x4A6E58E: strdup (strdup.c:42)
+==48114==    by 0x489D9AE: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x49B7820: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49B750A: ??? (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49B79C8: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49BC9E2: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x111D83: mlx_int_deal_shm (in /home/drago/so_long/so_long)
+==48114==    by 0x112011: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:XInitExtension
+   fun:XextAddDisplay
+   obj:/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+   fun:XextAddDisplay
+   fun:XShmQueryVersion
+   fun:mlx_int_deal_shm
+   fun:mlx_init
+   fun:main
+}
+==48114== 24 bytes in 1 blocks are still reachable in loss record 9 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x49B79F5: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49BC9E2: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x111D83: mlx_int_deal_shm (in /home/drago/so_long/so_long)
+==48114==    by 0x112011: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:XextAddDisplay
+   fun:XShmQueryVersion
+   fun:mlx_int_deal_shm
+   fun:mlx_init
+   fun:main
+}
+==48114== 29 bytes in 1 blocks are still reachable in loss record 10 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x489A0CD: _XUpdateAtomCache (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x489C929: XInternAtom (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x112002: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XUpdateAtomCache
+   fun:XInternAtom
+   fun:mlx_init
+   fun:main
+}
+==48114== 32 bytes in 1 blocks are still reachable in loss record 11 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x11185C: dup_pre_n (in /home/drago/so_long/so_long)
+==48114==    by 0x111B2B: read_line (in /home/drago/so_long/so_long)
+==48114==    by 0x111B9D: get_next_line (in /home/drago/so_long/so_long)
+==48114==    by 0x10EF54: create_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10F05F: generate_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10FF6B: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:dup_pre_n
+   fun:read_line
+   fun:get_next_line
+   fun:create_map
+   fun:generate_map
+   fun:main
+}
+==48114== 32 bytes in 1 blocks are still reachable in loss record 12 of 43
+==48114==    at 0x48487A9: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x4C0115E: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x4C01237: xcb_get_extension_data (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x4C012EE: xcb_prefetch_maximum_request_length (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x4C01364: xcb_get_maximum_request_length (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x48A152B: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   obj:/usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+   fun:xcb_get_extension_data
+   fun:xcb_prefetch_maximum_request_length
+   fun:xcb_get_maximum_request_length
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 32 bytes in 1 blocks are still reachable in loss record 13 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x4BFA1B7: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x4BFAA08: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x4BFAEB0: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x4BFBE44: xcb_wait_for_reply (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x4C01292: xcb_get_extension_data (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x4C012EE: xcb_prefetch_maximum_request_length (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x4C01364: xcb_get_maximum_request_length (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x48A152B: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   obj:/usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+   obj:/usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+   obj:/usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+   fun:xcb_wait_for_reply
+   fun:xcb_get_extension_data
+   fun:xcb_prefetch_maximum_request_length
+   fun:xcb_get_maximum_request_length
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 32 bytes in 1 blocks are still reachable in loss record 14 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x49B77FF: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49BC9E2: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x111D83: mlx_int_deal_shm (in /home/drago/so_long/so_long)
+==48114==    by 0x112011: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:XextAddDisplay
+   fun:XShmQueryVersion
+   fun:mlx_int_deal_shm
+   fun:mlx_init
+   fun:main
+}
+==48114== 32 bytes in 1 blocks are still reachable in loss record 15 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x49B77FF: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49B750A: ??? (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49B79C8: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49BC9E2: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x111D83: mlx_int_deal_shm (in /home/drago/so_long/so_long)
+==48114==    by 0x112011: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:XextAddDisplay
+   obj:/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+   fun:XextAddDisplay
+   fun:XShmQueryVersion
+   fun:mlx_int_deal_shm
+   fun:mlx_init
+   fun:main
+}
+==48114== 33 bytes in 1 blocks are still reachable in loss record 16 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x489A0CD: _XUpdateAtomCache (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x489C929: XInternAtom (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111FEB: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XUpdateAtomCache
+   fun:XInternAtom
+   fun:mlx_init
+   fun:main
+}
+==48114== 40 bytes in 1 blocks are still reachable in loss record 17 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48B11F1: _XPollfdCacheInit (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48A0E71: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XPollfdCacheInit
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 48 bytes in 1 blocks are still reachable in loss record 18 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48B0E71: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48A0B68: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XConnectXCB
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 48 bytes in 1 blocks are still reachable in loss record 19 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48B0E87: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48A0B68: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XConnectXCB
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 57 bytes in 1 blocks are still reachable in loss record 20 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x10EF8E: create_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10F05F: generate_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10FF6B: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:create_map
+   fun:generate_map
+   fun:main
+}
+==48114== 72 bytes in 1 blocks are still reachable in loss record 21 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48A0F20: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 112 bytes in 1 blocks are still reachable in loss record 22 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48B0D72: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48A0B68: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_XConnectXCB
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 112 bytes in 1 blocks are still reachable in loss record 23 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48A1200: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 128 bytes in 1 blocks are still reachable in loss record 24 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48A112E: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 128 bytes in 1 blocks are still reachable in loss record 25 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x489D99E: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x4907213: XkbUseExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48A16A8: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:XInitExtension
+   fun:XkbUseExtension
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 128 bytes in 1 blocks are still reachable in loss record 26 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x489D99E: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x49B7820: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49BC9E2: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x111D83: mlx_int_deal_shm (in /home/drago/so_long/so_long)
+==48114==    by 0x112011: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:XInitExtension
+   fun:XextAddDisplay
+   fun:XShmQueryVersion
+   fun:mlx_int_deal_shm
+   fun:mlx_init
+   fun:main
+}
+==48114== 128 bytes in 1 blocks are still reachable in loss record 27 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x489D99E: XInitExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x49B7820: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49B750A: ??? (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49B79C8: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49BC9E2: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x111D83: mlx_int_deal_shm (in /home/drago/so_long/so_long)
+==48114==    by 0x112011: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:XInitExtension
+   fun:XextAddDisplay
+   obj:/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+   fun:XextAddDisplay
+   fun:XShmQueryVersion
+   fun:mlx_int_deal_shm
+   fun:mlx_init
+   fun:main
+}
+==48114== 136 bytes in 1 blocks are still reachable in loss record 28 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x111F3F: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:mlx_init
+   fun:main
+}
+==48114== 152 bytes in 1 blocks are still reachable in loss record 29 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x490740E: XkbUseExtension (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48A16A8: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:XkbUseExtension
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 160 bytes in 1 blocks are still reachable in loss record 30 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x488F9EF: XCreateGC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48A15A4: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:XCreateGC
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 160 bytes in 1 blocks are still reachable in loss record 31 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x488F9EF: XCreateGC (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x11218E: mlx_new_window (in /home/drago/so_long/so_long)
+==48114==    by 0x110038: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:XCreateGC
+   fun:mlx_new_window
+   fun:main
+}
+==48114== 168 bytes in 1 blocks are still reachable in loss record 32 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48A10B2: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 192 bytes in 6 blocks are still reachable in loss record 33 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x11185C: dup_pre_n (in /home/drago/so_long/so_long)
+==48114==    by 0x111B2B: read_line (in /home/drago/so_long/so_long)
+==48114==    by 0x111B9D: get_next_line (in /home/drago/so_long/so_long)
+==48114==    by 0x10EFFE: create_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10F05F: generate_map (in /home/drago/so_long/so_long)
+==48114==    by 0x10FF6B: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:dup_pre_n
+   fun:read_line
+   fun:get_next_line
+   fun:create_map
+   fun:generate_map
+   fun:main
+}
+==48114== 208 bytes in 1 blocks are still reachable in loss record 34 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x49B5AE9: ??? (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49B79DF: XextAddDisplay (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x49BC9E2: XShmQueryVersion (in /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0)
+==48114==    by 0x111D83: mlx_int_deal_shm (in /home/drago/so_long/so_long)
+==48114==    by 0x112011: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   obj:/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+   fun:XextAddDisplay
+   fun:XShmQueryVersion
+   fun:mlx_int_deal_shm
+   fun:mlx_init
+   fun:main
+}
+==48114== 208 bytes in 1 blocks are still reachable in loss record 35 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48B2FAE: _XEnq (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48B5BB6: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48B6EC0: _XReadEvents (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48B7205: XWindowEvent (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x1124A5: mlx_int_wait_first_expose (in /home/drago/so_long/so_long)
+==48114==    by 0x1121CE: mlx_new_window (in /home/drago/so_long/so_long)
+==48114==    by 0x110038: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XEnq
+   obj:/usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+   fun:_XReadEvents
+   fun:XWindowEvent
+   fun:mlx_int_wait_first_expose
+   fun:mlx_new_window
+   fun:main
+}
+==48114== 512 bytes in 1 blocks are still reachable in loss record 36 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x489C46A: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x489C84E: XInternAtom (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111FEB: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   obj:/usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+   fun:XInternAtom
+   fun:mlx_init
+   fun:main
+}
+==48114== 936 bytes in 1 blocks are still reachable in loss record 37 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x1120F0: mlx_new_window (in /home/drago/so_long/so_long)
+==48114==    by 0x110038: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:mlx_new_window
+   fun:main
+}
+==48114== 1,456 bytes in 7 blocks are still reachable in loss record 38 of 43
+==48114==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48B2FAE: _XEnq (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48B5BB6: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48B6F01: _XReadEvents (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48B7205: XWindowEvent (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x1124A5: mlx_int_wait_first_expose (in /home/drago/so_long/so_long)
+==48114==    by 0x1121CE: mlx_new_window (in /home/drago/so_long/so_long)
+==48114==    by 0x110038: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XEnq
+   obj:/usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+   fun:_XReadEvents
+   fun:XWindowEvent
+   fun:mlx_int_wait_first_expose
+   fun:mlx_new_window
+   fun:main
+}
+==48114== 3,380 bytes in 1 blocks are still reachable in loss record 39 of 43
+==48114==    at 0x484DCD3: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x4BFD4FB: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x4BFDE6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x48B0EE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48A0B68: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:xcb_connect_to_fd
+   fun:xcb_connect_to_display_with_auth_info
+   fun:_XConnectXCB
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 4,704 bytes in 1 blocks are still reachable in loss record 40 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48A0B31: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 7,392 bytes in 2 blocks are still reachable in loss record 41 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48A1290: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 16,384 bytes in 1 blocks are still reachable in loss record 42 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x48A0EBE: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== 21,168 bytes in 1 blocks are still reachable in loss record 43 of 43
+==48114==    at 0x484DA83: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==48114==    by 0x4BFD204: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x4BFDE6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+==48114==    by 0x48B0EE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x48A0B68: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+==48114==    by 0x111F57: mlx_init (in /home/drago/so_long/so_long)
+==48114==    by 0x110005: main (in /home/drago/so_long/so_long)
+==48114== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:xcb_connect_to_fd
+   fun:xcb_connect_to_display_with_auth_info
+   fun:_XConnectXCB
+   fun:XOpenDisplay
+   fun:mlx_init
+   fun:main
+}
+==48114== LEAK SUMMARY:
+==48114==    definitely lost: 0 bytes in 0 blocks
+==48114==    indirectly lost: 0 bytes in 0 blocks
+==48114==      possibly lost: 0 bytes in 0 blocks
+==48114==    still reachable: 58,677 bytes in 55 blocks
+==48114==         suppressed: 0 bytes in 0 blocks
+==48114== 
+==48114== Use --track-origins=yes to see where uninitialised values come from
+==48114== For lists of detected and suppressed errors, rerun with: -s
+==48114== ERROR SUMMARY: 6 errors from 6 contexts (suppressed: 1 from 1)
