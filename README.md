@@ -1,4 +1,4 @@
-<h1 align="center">So_long leaktester</h1>
+<h1 align="center">so_long_leaktester</h1>
 
 <p align="center">
     This is a small script that will test your so_long in a bunch of maps and see if you have a memory leak in those cases.
@@ -21,7 +21,7 @@ Have your makefile ready. By default, so_long leaktester will `cd` into your so_
 A log file will be generated for each map test. Both the log files and the map files used for testing can be found in the maps directory.
 
 ---
-<h1 align="center">So_long leaktester</h1>
+<h1 align="center">so_long_leaktester</h1>
 
 Esse é um pequeno script que vai testar seu so_long em varios mapas e verificar se existe vazamento de memória nesses casos.
 
