@@ -30,11 +30,9 @@ git clone https://github.com/PedroDrago/so_long_leaktester.git
 make
 ```
 ### Observations
-Have your makefile ready. By default so_long leaktester will cd into your so_long directory, run `make` and will look for an executable named `so_long`. You can change this path if you will bi modifying the `SO_LONG` variable in `leaktester`, although, I do not recomend changing anything.
+Have your makefile ready. By default, so_long leaktester will `cd` into your so_long directory, run `make` and look for an executable named `so_long`. You can change this path if you modify the `SO_LONG` variable in `leaktester`, although I do not recommend changing anything.
 
-**Attetion: In the case of your so_long window opening while the test is running, you will need to close the window in an appropriate way for the test to continue (ESC or Winning the game)**.
-
-A logfile will be generate for each map test. Both the logfiles and the map files used for testing can be found in the `maps` directory. 
+A log file will be generated for each map test. Both the log files and the map files used for testing can be found in the maps directory.
 
 ---
 # So_long_leaktester
@@ -69,7 +67,5 @@ make
 
 ### Observações
 OBS: Tenha seu makefile pronto. Por padrão so_long_leaktester vai entrar no seu diretório do so_long (usar `cd`), rodar `make` e procurar por um executável chamado `so_long`. Você pode mudar o path modificando a variável `SO_LONG` em `leaktester`, porém, não recomendo que o faça.
-
-**Atenção: Em caso da janela do seu so_long abrir enquanto o teste está rodando, você precisará fechar a janela de um jeito apropriado (ESC ou ganhando o jogo)**.
 
 Um arquivo de log vai ser gerado para cada mapa testado. Ambos os arquivos de log e os arquivos com os mapas podems er achados no diretório `maps`.
