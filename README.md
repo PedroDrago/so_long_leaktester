@@ -1,6 +1,6 @@
 <h1 align="center">So_long leaktester</h1>
 
-<p align="center"
+<p align="center">
     This is a small script that will test your so_long in a bunch of maps and see if you have a memory leak in those cases.
 </p>
 
