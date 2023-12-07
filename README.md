@@ -6,26 +6,12 @@
 
 **Attention: No tester out there will cover 100% cases. Be smart, think and make your own tests, that counts for every project.**
 
-### Dependencies
-- Valgrind
-- Make
-
-If you don't have the dependencies installed:
-- Linux (debian based):
-```bash
-sudo apt install make valgrind
-```
-- Mac
-```bash
-brew install make valgrind
-```
-
 ### Usage
 1. Clone this repository inside your so_long directory:
 ``` bash
 git clone https://github.com/PedroDrago/so_long_leaktester.git
 ```
-2. Run leaktester from inside so_long_leaktester repository:
+2. Run leaktester from inside so_long_leaktester repository (you need to have both valgrind and make installed):
 ```bash
 make
 ```
@@ -41,22 +27,8 @@ Esse é um pequeno script que vai testar seu so_long em varios mapas e verificar
 
 **Atenção: Nenhum testador por aí vai cobrir 100% dos casos, seja esperto, pense e faça seus próprios testes, isso conta para qualquer projeto.**
 
-### Dependencias
-- Valgrind
-- Make
-
-Caso não possua alguma das dependencias:
-- Linux (baseados em Debian):
-```bash
-sudo apt install make valgrind
-```
-- Mac
-```bash
-brew install make valgrind
-```
-
 ### Como usar
-1. Clone esse repositório dentro do diretório do seu so_long:
+1. Clone esse repositório dentro do diretório do seu so_long (você precisa tanto do valgrind quanto do make instalados):
 ``` bash
 git clone https://github.com/PedroDrago/so_long_leaktester.git
 ```
