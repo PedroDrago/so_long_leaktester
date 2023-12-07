@@ -5,7 +5,7 @@
 </p>
 
 <p align="center"
-    <strong>Attention: No tester out there will cover 100% cases. Be smart, think and make your own tests, that counts for every project.</strong>
+    <strong Attention: No tester out there will cover 100% cases. Be smart, think and make your own tests, that counts for every project./>
 </p>
 
 ### Dependencies
