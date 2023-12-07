@@ -1,7 +1,5 @@
 #! /bin/bash
 
-# cd ..
-# make --no-print-directory
 SO_LONG=./so_long
 MAP_DIR=so_long_leaktester/maps
 RED='\033[0;31m'
@@ -11,6 +9,16 @@ ENDCOLOR='\033[0m'
 
 rm -f "$MAP_DIR"/*.log
 for file in "$MAP_DIR"/*; do
+	if [ "$file" == "$MAP_DIR/valid_esc.ber" ]; then
+		cat "$MAP_DIR/wrong_extension.txt"
+		sleep 2
+	elif [ "$file" == "$MAP_DIR/valid_winning.ber" ]; then
+		cat "$MAP_DIR/wrong_extension2.txt"
+		sleep 2
+	elif [ "$file" == "$MAP_DIR/valid_cross.ber" ]; then
+		cat "$MAP_DIR/wrong_extension.be"
+		sleep 2
+	fi
 	valgrind --leak-check=full --show-reachable=yes --show-leak-kinds=all --error-limit=no --gen-suppressions=all --log-file="$file.log" $SO_LONG $file > /dev/null 2>&1
 	bytes=$(cat "$file.log" | awk '/in use at exit/ {print $6}')
 	if [[ $bytes -eq 0 ]]; then
