@@ -21,6 +21,7 @@ Have your makefile ready. By default, so_long leaktester will `cd` into your so_
 A log file will be generated for each map test. Both the log files and the map files used for testing can be found in the maps directory.
 
 ---
+<h1 align="center">So_long leaktester</h1>
 
 Esse é um pequeno script que vai testar seu so_long em varios mapas e verificar se existe vazamento de memória nesses casos.
 
