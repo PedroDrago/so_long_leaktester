@@ -1,8 +1,12 @@
-# So_long leaktester
+<h1 align="center">So_long leaktester</h1>
 
-This is a small script that will test your so_long in a bunch of maps, and see if you have memory leak in those cases. 
+<p align="center"
+    This is a small script that will test your so_long in a bunch of maps and see if you have a memory leak in those cases.
+</p>
 
-**Attention: No tester out there will cover 100% cases, be smart, think and make your own tests, that counts for every project.**
+<p align="center"
+    <strong>Attention: No tester out there will cover 100% cases. Be smart, think and make your own tests, that counts for every project.</strong>
+</p>
 
 ### Dependencies
 - Valgrind
