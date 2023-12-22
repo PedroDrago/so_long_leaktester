@@ -7,6 +7,11 @@ GREEN='\033[0;32m'
 MAGENTA='\033[0;35m'
 ENDCOLOR='\033[0m'
 
+if [ ! -f "$SO_LONG" ]; then
+    echo " File '$SO_LONG' does not exist."
+    exit 1
+fi
+
 rm -f "$MAP_DIR"/*.log
 for file in "$MAP_DIR"/*; do
 	if [ "$file" == "$MAP_DIR/valid_esc.ber" ]; then
