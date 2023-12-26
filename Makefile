@@ -1,10 +1,10 @@
 NAME=leaktester
-
+REPO_NAME=so_long_leaktester
 all: so_long
 
 so_long:
 	@cd .. && make
-	@cd .. && ./so_long_leaktester/leaktester
+	@cd .. && ./$(REPO_NAME)/leaktester
 
 clean:
 	rm -f maps/*.log
