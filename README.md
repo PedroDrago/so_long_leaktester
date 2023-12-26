@@ -14,7 +14,7 @@ Run the tester from within the so_long_leaktester repository:
 make
 ```
 
-Attention: Have your makefile ready. By default, so_long_leaktester will enter your so_long directory (using cd), run make, and look for an executable named so_long. If you change the name of this repository when cloning or if your executable is not named so_long, you can modify the variables SO_LONG and REPO_NAME in the leaktester file and in the project's makefile.
+Attention: Have your makefile ready. By default, so_long_leaktester will enter your `so_long` directory (using `cd`), run `make`, and look for an executable named `so_long`. If you change the name of this repository when cloning or if your executable is not named `so_long`, you can modify the variables `SO_LONG` and `REPO_NAME` in the leaktester file and in the project's makefile.
 
 A log file will be generated for each tested map. Both the log files and the files with the maps can be found in the maps directory.
 
